@@ -17,21 +17,24 @@ const FavoriteButton = () => {
   );
 };
 
+const IncludesView = ({item, icon, cons}) => {
+  return (
+    <View style={styles.includesView}>
+      <Icon name={icon} color="black" size={20} />
+      <Text style={styles.includesFont}>
+        {item}
+        {cons}
+      </Text>
+    </View>
+  );
+};
+
 const Includes = ({rooms, baths, surface}) => {
   return (
     <View style={styles.includesContainer}>
-      <View style={styles.includesView}>
-        <Icon name="bed-outline" color="black" size={20} />
-        <Text style={styles.includesFont}>{rooms}</Text>
-      </View>
-      <View style={styles.includesView}>
-        <Icon name="water-outline" color="black" size={20} />
-        <Text style={styles.includesFont}>{baths}</Text>
-      </View>
-      <View style={styles.includesView}>
-        <Icon name="home-outline" color="black" size={20} />
-        <Text style={styles.includesFont}>{surface}ft²</Text>
-      </View>
+      <IncludesView item={rooms} icon="bed-outline" />
+      <IncludesView item={baths} icon="water-outline" />
+      <IncludesView item={surface} icon="home-outline" cons="ft²" />
     </View>
   );
 };
