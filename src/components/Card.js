@@ -1,13 +1,19 @@
-import React from 'react';
-import {View, Text, ImageBackground, StyleSheet} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, ImageBackground, TouchableHighlight} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from '../styles/Card.js';
 
 const FavoriteButton = () => {
+  const [liked, changeLiked] = useState(true);
   return (
-    <View style={styles.heartContainer}>
+    <TouchableHighlight
+      onPress={() => changeLiked(!liked)}
+      style={[
+        styles.heartContainer,
+        {backgroundColor: liked ? '#00B074' : 'pink'},
+      ]}>
       <Icon name="heart" size={20} color="#fff" />
-    </View>
+    </TouchableHighlight>
   );
 };
 
