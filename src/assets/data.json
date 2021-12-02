@@ -1,0 +1,76 @@
+{
+  "houses": [
+    {
+      "name": "The Willows",
+      "location": "3517 W. Gray St. Utica",
+      "rooms": 3,
+      "baths": 2,
+      "surface": 230,
+      "price": 440,
+      "rate": 4.7
+    },
+    {
+      "name": "Orchard House",
+      "location": "3517 W. Gray St. Utica",
+      "rooms": 4,
+      "baths": 3,
+      "surface": 330,
+      "price": 640,
+      "rate": 4.9
+    },
+    {
+      "name": "Nando Casa",
+      "location": "3517 W. Gray St. Utica",
+      "rooms": 3,
+      "baths": 2,
+      "surface": 230,
+      "price": 440,
+      "rate": 4.7
+    },
+    {
+      "name": "Corner House",
+      "location": "3517 W. Gray St. Utica",
+      "rooms": 5,
+      "baths": 2,
+      "surface": 310,
+      "price": 540,
+      "rate": 4.4
+    },
+    {
+      "name": "The Willows",
+      "location": "3517 W. Gray St. Utica",
+      "rooms": 3,
+      "baths": 2,
+      "surface": 230,
+      "price": 440,
+      "rate": 4.7
+    },
+    {
+      "name": "The Willows",
+      "location": "3517 W. Gray St. Utica",
+      "rooms": 3,
+      "baths": 2,
+      "surface": 230,
+      "price": 440,
+      "rate": 4.7
+    },
+    {
+      "name": "The Willows",
+      "location": "3517 W. Gray St. Utica",
+      "rooms": 3,
+      "baths": 2,
+      "surface": 230,
+      "price": 440,
+      "rate": 4.7
+    },
+    {
+      "name": "The Willows",
+      "location": "3517 W. Gray St. Utica",
+      "rooms": 3,
+      "baths": 2,
+      "surface": 230,
+      "price": 440,
+      "rate": 4.7
+    }
+  ]
+}
