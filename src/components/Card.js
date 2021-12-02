@@ -4,12 +4,12 @@ import {View, Text, ImageBackground, StyleSheet} from 'react-native';
 const Description = ({house}) => {
   return (
     <View>
-      <Text>{house.name}</Text>
-      <Text>{house.location}</Text>
-      <Text>
-        {house.rooms} - {house.baths} - {house.surface}
+      <Text style={[styles.name, styles.fontBold]}>{house.name}</Text>
+      <Text style={styles.location}>{house.location}</Text>
+      <Text style={styles.fontBold}>
+        {house.rooms} - {house.baths} - {house.surface}ft²
       </Text>
-      <Text>${house.price}/m</Text>
+      <Text style={[styles.name, styles.fontBold]}>${house.price}/m</Text>
     </View>
   );
 };
@@ -29,7 +29,7 @@ const Thumbnail = ({rate}) => {
 
 const Card = ({house}) => {
   return (
-    <View>
+    <View style={styles.card}>
       <Thumbnail rate={house.rate} />
       <Description house={house} />
     </View>
@@ -40,8 +40,9 @@ const styles = StyleSheet.create({
   image: {
     borderRadius: 16.05,
     resizeMode: 'contain',
-    width: 125,
-    height: 125,
+    width: 100,
+    height: 100,
+    marginRight: 20,
   },
   rate: {
     color: 'white',
@@ -58,6 +59,24 @@ const styles = StyleSheet.create({
     width: 50,
     textAlign: 'center',
     borderRadius: 8,
+  },
+  card: {
+    backgroundColor: '#F5FDFF',
+    borderRadius: 15,
+    flexDirection: 'row',
+    padding: 15,
+    marginHorizontal: 15,
+    marginVertical: 10,
+  },
+  fontBold: {
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  name: {
+    fontSize: 20,
+  },
+  location: {
+    color: 'grey',
   },
 });
 

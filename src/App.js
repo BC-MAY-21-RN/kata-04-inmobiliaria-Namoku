@@ -9,8 +9,14 @@
 import React from 'react';
 import Card from './components/Card';
 import {houses} from './assets/data.json';
+import {View} from 'react-native';
 
 const App = () => {
-  return <Card house={houses[0]} />;
+  return (
+    <View style={{backgroundColor: '#E5E5E5', height: '100%'}}>
+      <Card house={houses[0]} />
+      <Card house={houses[1]} />
+    </View>
+  );
 };
 export default App;
