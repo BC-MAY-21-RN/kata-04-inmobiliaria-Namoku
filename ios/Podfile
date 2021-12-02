@@ -12,6 +12,8 @@ target 'kata04' do
     :hermes_enabled => false
   )
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'kata04Tests' do
     inherit! :complete
     # Pods for testing

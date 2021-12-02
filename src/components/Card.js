@@ -1,15 +1,50 @@
 import React from 'react';
 import {View, Text, ImageBackground, StyleSheet} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+import styles from '../styles/Card.js';
+
+const FavoriteButton = () => {
+  return (
+    <View style={styles.heartContainer}>
+      <Icon name="heart" size={20} color="#fff" />
+    </View>
+  );
+};
+
+const Includes = ({rooms, baths, surface}) => {
+  return (
+    <View style={styles.includesContainer}>
+      <View style={styles.includesView}>
+        <Icon name="bed-outline" color="black" size={20} />
+        <Text style={styles.includesFont}>{rooms}</Text>
+      </View>
+      <View style={styles.includesView}>
+        <Icon name="water-outline" color="black" size={20} />
+        <Text style={styles.includesFont}>{baths}</Text>
+      </View>
+      <View style={styles.includesView}>
+        <Icon name="home-outline" color="black" size={20} />
+        <Text style={styles.includesFont}>{surface}ft²</Text>
+      </View>
+    </View>
+  );
+};
 
 const Description = ({house}) => {
   return (
-    <View>
+    <View style={{flex: 1}}>
       <Text style={[styles.name, styles.fontBold]}>{house.name}</Text>
-      <Text style={styles.location}>{house.location}</Text>
-      <Text style={styles.fontBold}>
-        {house.rooms} - {house.baths} - {house.surface}ft²
-      </Text>
+      <View style={styles.includesView}>
+        <Icon name="location-outline" color="black" size={20} />
+        <Text style={styles.location}>{house.location}</Text>
+      </View>
+      <Includes
+        rooms={house.rooms}
+        baths={house.baths}
+        surface={house.surface}
+      />
       <Text style={[styles.name, styles.fontBold]}>${house.price}/m</Text>
+      <FavoriteButton />
     </View>
   );
 };
@@ -21,6 +56,7 @@ const Thumbnail = ({rate}) => {
       imageStyle={styles.image}
       source={require('../assets/img/house.png')}>
       <View style={styles.rate}>
+        <Icon name="star" size={10} color="#EEBA00" />
         <Text style={styles.rateText}>{rate}</Text>
       </View>
     </ImageBackground>
@@ -35,49 +71,5 @@ const Card = ({house}) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  image: {
-    borderRadius: 16.05,
-    resizeMode: 'contain',
-    width: 100,
-    height: 100,
-    marginRight: 20,
-  },
-  rate: {
-    color: 'white',
-    position: 'absolute',
-    bottom: 5,
-    right: 0,
-    left: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  rateText: {
-    color: '#7A6229',
-    backgroundColor: '#FBEDB7',
-    width: 50,
-    textAlign: 'center',
-    borderRadius: 8,
-  },
-  card: {
-    backgroundColor: '#F5FDFF',
-    borderRadius: 15,
-    flexDirection: 'row',
-    padding: 15,
-    marginHorizontal: 15,
-    marginVertical: 10,
-  },
-  fontBold: {
-    color: 'black',
-    fontWeight: 'bold',
-  },
-  name: {
-    fontSize: 20,
-  },
-  location: {
-    color: 'grey',
-  },
-});
 
 export default Card;
