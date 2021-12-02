@@ -9,13 +9,20 @@
 import React from 'react';
 import Card from './components/Card';
 import {houses} from './assets/data.json';
-import {View} from 'react-native';
+import {View, FlatList} from 'react-native';
 
 const App = () => {
+  const renderItem = ({item}) => {
+    return <Card house={item} />;
+  };
+
   return (
     <View style={{backgroundColor: '#E5E5E5', height: '100%'}}>
-      <Card house={houses[0]} />
-      <Card house={houses[1]} />
+      <FlatList
+        data={houses}
+        renderItem={renderItem}
+        keyExtractor={({index}) => index}
+      />
     </View>
   );
 };
