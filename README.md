@@ -2,6 +2,8 @@
 
 # Inmobiliaria
 
+<a href="https://codeclimate.com/github/BC-MAY-21-RN/kata-04-inmobiliaria-Namoku/maintainability"><img src="https://api.codeclimate.com/v1/badges/2fd1e14b8f4536068d40/maintainability" /></a>
+
 ![Cover](img/cover.jpg)
 <span>Photo by <a href="https://unsplash.com/@jd_alon?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jose Alonso</a> on <a href="https://unsplash.com/s/photos/rental?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
